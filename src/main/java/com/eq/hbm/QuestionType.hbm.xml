@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.eq.model.QuestionType" table="question_type">
+		<meta attribute="class-description">
+			This class contains the chapter detail.
+		</meta>
+		<id name="questionTypeId" type="int" column="question_type_id">
+			<generator class="native" />
+		</id>
+		<property name="questionType" column="question_type" type="string" />
+	</class>
+</hibernate-mapping>
+

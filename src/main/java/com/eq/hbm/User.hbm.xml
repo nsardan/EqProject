@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.eq.model.User" table="User">
+		<meta attribute="class-description">
+			This class contains the user detail.
+		</meta>
+		<id name="userId" type="int" column="user_id">
+			<generator class="identity" />
+		</id>
+		
+		<property name="userName" column="user_name" type="string" />
+		<property name="password" column="password" type="string" />
+		<property name="role" column="role" type="string" />
+		<property name="isLocked" column="is_locked" type="boolean" />
+		
+		<one-to-one name="userProfile" class="com.eq.UserProfile"
+			cascade="save-update"></one-to-one>
+		<set name="userLog" table="user_log" cascade="all">
+		<key column="user_log_id"></key>
+		<one-to-many class="com.eq.model.UserLog" ></one-to-many>
+		</set>
+	</class>
+
+</hibernate-mapping>

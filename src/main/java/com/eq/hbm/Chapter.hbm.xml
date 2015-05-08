@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.eq.model.Chapter" table="Chapter">
+		<meta attribute="class-description">
+			This class contains the chapter detail.
+		</meta>
+		<id name="chapterId" type="int" column="chapter_id">
+			<generator class="native" />
+		</id>
+		<property name="chapterNumber" column="chapter_number" type="int" />
+		<property name="classLevelId" column="class_level_id" type="int" />
+		<property name="subjectId" column="subject_id" type="int" />
+		<property name="chapterName" column="chapter_name" type="string" />
+	</class>
+</hibernate-mapping>

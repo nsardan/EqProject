@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.eq.model.GeneratedPaper" table="Generated_paper">
+		<meta attribute="class-description">
+			This class contains the generated paper detail.
+		</meta>
+		<id name="generatedPaperId" type="int" column="generated_paper_id">
+			<generator class="native" />
+		</id>
+		<property name="uid" column="uid" type="string" />
+		<property name="generatedQuestionUid" column="generated_question_uid"
+			type="string" />
+		<property name="orderNo" column="order_no" type="int" />
+		<property name="paperTitle" column="paper_title" type="string" />
+		<property name="creationDate" column="creation_date" type="date" />
+		<property name="createdBy" column="created_by" type="string" />
+	</class>
+</hibernate-mapping>
+
